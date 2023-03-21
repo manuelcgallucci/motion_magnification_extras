@@ -3,7 +3,7 @@ import numpy as np
 import glob
 
 # read form full vids
-name = 'beam_video_fast_modes_fl0.3_fh0.7_fs30.0_n2_differenceOfIIR'
+name = 'gun'
 frame_rate = 30
 
 imgs_dir = './output/{:s}'.format(name)
@@ -11,7 +11,7 @@ video_dir = './full_vid/'
 
 img_array = []
 # files are in order! 
-for filename in glob.glob('{:s}/*.png'.format(imgs_dir)):
+for filename in sorted(glob.glob('{:s}/*.png'.format(imgs_dir))):
     print(filename)
     img = cv2.imread(filename)
     height, width, layers = img.shape
